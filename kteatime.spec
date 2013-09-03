@@ -1,6 +1,6 @@
 Summary:	System tray applet that makes sure your tea doesn't get too strong
 Name:		kteatime
-Version:	4.11.0
+Version:	4.11.1
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -38,6 +38,9 @@ System tray applet that makes sure your tea doesn't get too strong.
 %makeinstall_std -C build
 
 %changelog
+* Tue Sep 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.11.1-1
+- New version 4.11.1
+
 * Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.11.0-1
 - New version 4.11.0
 - Split from kdetoys4 package as upstream did

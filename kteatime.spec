@@ -1,7 +1,7 @@
 Summary:	System tray applet that makes sure your tea doesn't get too strong
 Name:		kteatime
 Version:	 18.08.2
-Release:	1
+Release:	2
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2+

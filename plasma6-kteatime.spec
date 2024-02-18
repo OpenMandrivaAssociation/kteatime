@@ -1,7 +1,10 @@
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	System tray applet that makes sure your tea doesn't get too strong
 Name:		plasma6-kteatime
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
@@ -11,7 +14,11 @@ Url:		http://www.kde.org
 %else
 %define ftpdir stable
 %endif
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/utilities/kteatime/-/archive/%{gitbranch}/kteatime-%{gitbranchd}.tar.bz2#/kteatime-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/kteatime-%{version}.tar.xz
+%endif
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
@@ -43,7 +50,7 @@ System tray applet that makes sure your tea doesn't get too strong.
 #-------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kteatime-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n kteatime-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja

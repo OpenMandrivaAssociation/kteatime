@@ -4,7 +4,7 @@
 Summary:	System tray applet that makes sure your tea doesn't get too strong
 Name:		plasma6-kteatime
 Version:	24.12.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://www.kde.org

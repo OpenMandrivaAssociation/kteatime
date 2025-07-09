@@ -2,7 +2,7 @@
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	System tray applet that makes sure your tea doesn't get too strong
-Name:		plasma6-kteatime
+Name:		kteatime
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
